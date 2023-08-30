@@ -212,7 +212,7 @@ class Conn:
 
     def satin(
         self,
-        name="",
+        name,
         extension="",
         path="",
         entity="",
@@ -280,6 +280,7 @@ class Conn:
         More information on importing ACIS parts is available in ACIS in the
         Connection User's Guide.
         """
+
         command = f"~SATIN,{name},{extension},{path},{entity},{fmt},{nocl},{noan}"
         return self.run(command, **kwargs)
 
